@@ -24,7 +24,7 @@ class _MyFormPageState extends State<MyFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form'),
+        title: const Text('Form'),
       ),
       // Menambahkan drawer menu
       drawer: Drawer(
@@ -228,40 +228,38 @@ class _MyFormPageState extends State<MyFormPage> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             elevation: 15,
-                            child: Container(
-                              child: ListView(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                shrinkWrap: true,
-                                children: <Widget>[
-                                  Center(child: const Text('Informasi Data')),
-                                  SizedBox(height: 20),
-                                  // TODO: Munculkan informasi yang didapat dari form
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text('Nama: $_namaLengkap'),
-                                      if (jenjangDiploma)
-                                        const Text('Jenjang: Diploma'),
-                                      if (jenjangDoktor)
-                                        const Text('Jenjang: Doktor'),
-                                      if (jenjangMagister)
-                                        const Text('Jenjang: Magister'),
-                                      if (jenjangSarjana)
-                                        const Text('Jenjang: Sarjana'),
-                                      Text('Umur: $umur'),
-                                      Text('Kelas: $kelasPBP'),
-                                      Text('Practice: $_nilaiSwitch'),
-                                    ],
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Kembali'),
-                                  ),
-                                ],
-                              ),
+                            child: ListView(
+                              padding:
+                                  const EdgeInsets.only(top: 20, bottom: 20),
+                              shrinkWrap: true,
+                              children: <Widget>[
+                                const Center(child: Text('Informasi Data')),
+                                const SizedBox(height: 20),
+                                // TODO: Munculkan informasi yang didapat dari form
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text('Nama: $_namaLengkap'),
+                                    if (jenjangDiploma)
+                                      const Text('Jenjang: Diploma'),
+                                    if (jenjangDoktor)
+                                      const Text('Jenjang: Doktor'),
+                                    if (jenjangMagister)
+                                      const Text('Jenjang: Magister'),
+                                    if (jenjangSarjana)
+                                      const Text('Jenjang: Sarjana'),
+                                    Text('Umur: $umur'),
+                                    Text('Kelas: $kelasPBP'),
+                                    Text('Practice: $_nilaiSwitch'),
+                                  ],
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: const Text('Kembali'),
+                                ),
+                              ],
                             ),
                           );
                         },
