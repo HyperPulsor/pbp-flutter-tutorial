@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab6/page/main.dart';
+import 'package:lab6/main.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
